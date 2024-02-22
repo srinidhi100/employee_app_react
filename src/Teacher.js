@@ -26,7 +26,7 @@ function User() {
 
     const deleteuser = async (id) => {
         try {
-            const deleterecord = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/deleteEmployee/${id}`)
+            const deleterecord = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteEmployee/${id}`)
             console.log("delete")
             loadUser();
             // redirect to home

@@ -18,7 +18,7 @@ function EditUser() {
         try {
             const studData = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/employee/${params.id}`);
             console.log("studData.data ",studData.data )
-            seteditstudentData(studData.data[0])
+            seteditstudentData(studData.data)
             setLoading(false)
         } catch (error) {
             alert("error")

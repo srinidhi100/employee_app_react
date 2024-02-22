@@ -52,7 +52,7 @@ function CreateUser(editValues) {
         onSubmit: async (values) => {
             try {
                 if(editValues.data)
-                await axios.post(`${process.env.REACT_APP_BACKEND_URL}/editEmployee/${editValues.data._id}`, values);
+                await axios.put(`${process.env.REACT_APP_BACKEND_URL}/editEmployee/${editValues.data._id}`, values);
                 else
                 await axios.post(`${process.env.REACT_APP_BACKEND_URL}/createEmployee`, values);
                 alert("Success")

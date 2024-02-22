@@ -17,9 +17,9 @@ function ViewUser() {
   const loadUser = async () => {
     try {
       const studentData = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/employee/${params.id}`);
-      console.log("VIEWWWW", studentData.data[0])
-      if (studentData.data[0] !== undefined) {
-        setuserData(studentData.data[0])
+      console.log("VIEWWWW", studentData.data)
+      if (studentData.data !== undefined) {
+        setuserData(studentData.data)
       }
       setLoading(false)
     } catch (error) {
